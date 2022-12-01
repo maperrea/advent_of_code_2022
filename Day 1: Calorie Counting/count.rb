@@ -1,5 +1,1 @@
-input = File.read("input.txt")
-
-sums = input.split("\n\n").map { |s| s.split("\n").sum { |n| n.to_i} }
-sums.sort!.reverse!
-puts sums[0,3].sum
+puts File.read("input.txt").split("\n\n").map { |s| s.split("\n").sum { |n| n.to_i} }.sort!.reverse![0,3].sum
